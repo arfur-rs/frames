@@ -1,10 +1,15 @@
-<h1 align="center">![Frames](./docs/assets/header.png)</h1>
+![Frames](./docs/assets/header-long.png)
+
+<h4 align="center">
+    <a href="https://docs.rs/frames">Documentation</a>
+  | <a href="./LICENSE.md">License</a>
+</h1>
 
 You want to move your robot from point A to point B. That's all you ever want to do, really. The question is, how do you model the multiple frames that exist in your environment?
 
 Say you have the following:
 
-![example figure](./docs/assets/fig-a.png)
+![Example figure](./docs/assets/fig-a.png)
 
 In short — `frames` solves for `(x, y)` like so:
 
