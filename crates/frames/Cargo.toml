@@ -1,6 +1,16 @@
 [package]
 name = "frames"
+description = "Contextual frames made simple."
+repository = "https://github.com/bobbbay/frames"
+readme = "../../README.md"
+
+keywords = [ "frames", "context", "contextual" ]
+categories = [ "mathematics" ]
+
 version = "0.0.0"
 edition = "2021"
+
+license = "MIT"
+license-file = "../../LICENSE.md"
 
 [dependencies]
