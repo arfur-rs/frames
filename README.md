@@ -13,15 +13,34 @@ Say you have the following:
 
 In short — `frames` solves for `(x, y, θ)` like so:
 
-```ignore
+```rust
 use frames::prelude::*;
+use nalgebra::{Isometry2, Vector2};
+use std::f32::consts::PI;
 
-let mut (field, robot): (Frame<(i32, i32, i32), Frame<(i32, i32, i32)>) = (Frame::new(), Frame::new());
-robot.is((1, 1, 45)).in_context_of(&field);
+fn main() -> Result<(), FrameError> {
+    let mut frames = Frames::new();
 
-let (x, y) = field.point((7, 5, 0)).get_in_context_of(&robot);
+    let field = Frame::new("field");
+    let robot = Frame::new("robot");
 
-assert_eq!((x, y), (6, 4));
+    frames.add_frame(field, Isometry2::new(Vector2::new(0., 0.), 0.))?;
+    frames.add_frame(robot, Isometry2::new(Vector2::new(1., 1.), PI))?;
+
+    let x = Point::new("x");
+    frames.add_point_in_context(
+        x,
+        Isometry2::new(Vector2::new(7., 5.), PI),
+        field,
+    )?;
+
+    assert_eq!(
+        frames.get_point_in_context(x, robot)?,
+        Isometry2::new(Vector2::new(6., 4.), 0.)
+    );
+
+    Ok(())
+}
 ```
 
 ## Features

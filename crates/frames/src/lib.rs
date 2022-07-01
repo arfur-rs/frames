@@ -3,5 +3,5 @@
 pub mod frame;
 
 pub mod prelude {
-    pub use crate::frame::Frame;
+    pub use crate::frame::*;
 }
