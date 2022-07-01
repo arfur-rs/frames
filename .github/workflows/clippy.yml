@@ -19,7 +19,7 @@ jobs:
 
       - uses: actions-rs/toolchain@v1
         with:
-          toolchain: ${{ matrux.rust }}
+          toolchain: ${{ matrix.rust }}
           components: clippy
           override: true
 
