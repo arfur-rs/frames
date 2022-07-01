@@ -6,10 +6,10 @@
 </h6>
 
 <p align="center">
-    <img alt="Crates.io" src="https://img.shields.io/crates/v/frames?color=81B29A&logoColor=D9E0EE&style=for-the-badge">
-    <img alt="docs.rs" src="https://img.shields.io/docsrs/frames?color=525893&logoColor=D9E0EE&style=for-the-badge">
+    <a href="https://crates.io/crates/frames"><img alt="Crates.io" src="https://img.shields.io/crates/v/frames?color=81B29A&logoColor=D9E0EE&style=for-the-badge"></a>
+    <a href="https://docs.rs/frames"><img alt="docs.rs" src="https://img.shields.io/docsrs/frames?color=525893&logoColor=D9E0EE&style=for-the-badge"></a>
+    <a href="https://codecov.io/gh/bobbbay/frames"><img alt="Codecov" src="https://img.shields.io/codecov/c/github/bobbbay/frames?color=FFFAEB&style=for-the-badge&token=O04ZY3KQUF"></a>
 </p>
-
 <hr/>
 
 You want to move your robot from point A to point B. That's all you ever want to do, really. The question is, how do you model the multiple frames that exist in your environment?

@@ -25,7 +25,7 @@ checksum = "cdead85bdec19c194affaeeb670c0e41fe23de31459efd1c174d049269cf02cc"
 
 [[package]]
 name = "frames"
-version = "0.0.0"
+version = "0.1.0"
 dependencies = [
  "nalgebra",
  "thiserror",
