@@ -11,12 +11,12 @@ Say you have the following:
 
 ![Example figure](./docs/assets/fig-a.png)
 
-In short — `frames` solves for `(x, y)` like so:
+In short — `frames` solves for `(x, y, θ)` like so:
 
-```rust
+```ignore
 use frames::prelude::*;
 
-let mut (field, robot): (Frame, Frame) = (Frame::new(), Frame::new());
+let mut (field, robot): (Frame<(i32, i32, i32), Frame<(i32, i32, i32)>) = (Frame::new(), Frame::new());
 robot.is((1, 1, 45)).in_context_of(&field);
 
 let (x, y) = field.point((7, 5, 0)).get_in_context_of(&robot);
@@ -29,4 +29,3 @@ assert_eq!((x, y), (6, 4));
  * **Efficient** — optimized, no-nonsense calculations.
  * **Scalable** — calculate in any dimensions.
  * **Type-safe** — errors can be seen at compile-time.
-

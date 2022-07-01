@@ -1,8 +1,7 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        let result = 2 + 2;
-        assert_eq!(result, 4);
-    }
+#![doc = include_str!("../../../README.md")]
+
+pub mod frame;
+
+pub mod prelude {
+    pub use crate::frame::Frame;
 }

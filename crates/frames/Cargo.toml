@@ -11,6 +11,10 @@ version = "0.0.0"
 edition = "2021"
 
 license = "MIT"
-license-file = "../../LICENSE.md"
 
 [dependencies]
+nalgebra = "0.31.0"
+thiserror = "1.0.31"
+
+[package.metadata.nix]
+build = true
