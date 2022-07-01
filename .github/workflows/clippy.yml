@@ -1,4 +1,4 @@
-name: Clippy review
+name: clippy
 on: push
 
 jobs:
@@ -6,13 +6,22 @@ jobs:
     name: Clippy
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        rust:
+          - stable
+          - beta
+          - nightly
+          - 1.60.0
+
     steps:
       - uses: actions/checkout@v1
 
       - uses: actions-rs/toolchain@v1
         with:
-            components: clippy
-            override: true
+          toolchain: ${{ matrux.rust }}
+          components: clippy
+          override: true
 
       - uses: actions-rs/clippy-check@v1
         with:
