@@ -6,8 +6,8 @@
 </h6>
 
 <p align="center">
-    <img alt="Crates.io" src="https://img.shields.io/crates/v/frames?color=C9CBFF&logoColor=D9E0EE&style=for-the-badge">
-    <img alt="docs.rs" src="https://img.shields.io/docsrs/frames?color=F2CDCD&logoColor=D9E0EE&style=for-the-badge">
+    <img alt="Crates.io" src="https://img.shields.io/crates/v/frames?color=81B29A&logoColor=D9E0EE&style=for-the-badge">
+    <img alt="docs.rs" src="https://img.shields.io/docsrs/frames?color=525893&logoColor=D9E0EE&style=for-the-badge">
 </p>
 
 <hr/>
@@ -18,7 +18,7 @@ Say you have the following:
 
 ![Example figure](./docs/assets/fig-a.png)
 
-In short — `frames` solves for `(x, y, θ)` like so:
+In short — Frames solves for `(x, y, θ)` like so:
 
 ```rust
 use frames::prelude::*;
